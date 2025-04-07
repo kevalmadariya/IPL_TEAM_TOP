@@ -1,0 +1,112 @@
+[
+    {
+        "Id": 0,
+        "Team": "Delhi Capitals",
+        "Matches": "3",
+        "Won": "3",
+        "Lost": "0",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "6",
+        "NRR": "+1.257"
+    },
+    {
+        "Id": 1,
+        "Team": "Gujarat Titans",
+        "Matches": "4",
+        "Won": "3",
+        "Lost": "1",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "6",
+        "NRR": "+1.031"
+    },
+    {
+        "Id": 2,
+        "Team": "Royal Challengers Bengaluru",
+        "Matches": "3",
+        "Won": "2",
+        "Lost": "1",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "4",
+        "NRR": "+1.149"
+    },
+    {
+        "Id": 3,
+        "Team": "Punjab Kings",
+        "Matches": "3",
+        "Won": "2",
+        "Lost": "1",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "4",
+        "NRR": "+0.074"
+    },
+    {
+        "Id": 4,
+        "Team": "Kolkata Knight Riders",
+        "Matches": "4",
+        "Won": "2",
+        "Lost": "2",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "4",
+        "NRR": "+0.070"
+    },
+    {
+        "Id": 5,
+        "Team": "Lucknow Super Giants",
+        "Matches": "4",
+        "Won": "2",
+        "Lost": "2",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "4",
+        "NRR": "+0.048"
+    },
+    {
+        "Id": 6,
+        "Team": "Rajasthan Royals",
+        "Matches": "4",
+        "Won": "2",
+        "Lost": "2",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "4",
+        "NRR": "-0.185"
+    },
+    {
+        "Id": 7,
+        "Team": "Mumbai Indians",
+        "Matches": "4",
+        "Won": "1",
+        "Lost": "3",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "2",
+        "NRR": "+0.108"
+    },
+    {
+        "Id": 8,
+        "Team": "Chennai Super Kings",
+        "Matches": "4",
+        "Won": "1",
+        "Lost": "3",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "2",
+        "NRR": "-0.891"
+    },
+    {
+        "Id": 9,
+        "Team": "Sunrisers Hyderabad",
+        "Matches": "5",
+        "Won": "1",
+        "Lost": "4",
+        "Tied": "0",
+        "NR": "0",
+        "Points": "2",
+        "NRR": "-1.629"
+    }
+]
