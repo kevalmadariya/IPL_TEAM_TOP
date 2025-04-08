@@ -51,19 +51,21 @@ def push_to_github(file_path, repo, branch="main"):
 
 # Function to run scraping script periodically
 def update_data():
+    print("update.....loading")
     os.system("python scrape.py")
     push_to_github("points_table.json", "kevalmadariya/IPL_TEAM_TOP")
     push_to_github("schedule.json", "kevalmadariya/IPL_TEAM_TOP")
 
 # Schedule the scraping script to run every 3 hours
 scheduler = BackgroundScheduler()
-
-# Schedule to run at 11:30 PM
-scheduler.add_job(update_data, CronTrigger(hour=23, minute=30))
-# Schedule to run at 7:30 PM (19:30)
-scheduler.add_job(update_data, CronTrigger(hour=19, minute=30))
-
+scheduler = BackgroundScheduler()
+scheduler.add_job(update_data, 'interval', hours=1/60)
 scheduler.start()
+# # Schedule to run at 11:30 PM
+# scheduler.add_job(update_data, CronTrigger(hour=23, minute=30))
+# # Schedule to run at 7:30 PM (19:30)
+# scheduler.add_job(update_data, CronTrigger(hour=19, minute=30))
+# scheduler.start()
 
 # Load data from JSON
 def load_data(filename):
