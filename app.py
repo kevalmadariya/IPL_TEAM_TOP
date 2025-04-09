@@ -58,7 +58,6 @@ def update_data():
 
 # Schedule the scraping script to run every 3 hours
 scheduler = BackgroundScheduler()
-scheduler = BackgroundScheduler()
 scheduler.add_job(update_data, 'interval', hours=1/60)
 scheduler.start()
 # # Schedule to run at 11:30 PM
