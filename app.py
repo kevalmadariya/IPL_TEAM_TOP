@@ -73,6 +73,7 @@ def load_data(filename):
 
 @app.route('/')
 def home():
+    print("home.......")
     return render_template("index.html")
 
 @app.route('/points-table')
