@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from predict import predict_team_success
 from scrape import scrape_points_and_schedule
+const port = process.env.PORT || 4000 
 
 app = Flask(__name__)
 
@@ -24,9 +25,10 @@ def predict(id):
     result = predict_team_success(id,points_data,schedule_data)
     print(result)
     return render_template("points_table.html", points=points_data, result=result)
-
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
 # from flask import Flask, render_template
 # import json
