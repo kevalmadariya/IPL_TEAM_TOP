@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from predict import predict_team_success
 from scrape import scrape_points_and_schedule
+import os
 
 app = Flask(__name__)
 
