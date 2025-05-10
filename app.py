@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from predict import predict_team_success
 from scrape import scrape_points_and_schedule
-const port = process.env.PORT || 4000 
 
 app = Flask(__name__)
 
