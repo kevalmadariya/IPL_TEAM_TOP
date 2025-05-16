@@ -1,0 +1,116 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IPL Cricket Central
+  </title>
+  <style>
+    body {
+        background: linear-gradient(180deg, #1E3A8A 0%, #7C3AED 100%);
+   
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+     <i class="fas fa-trophy text-orange-500 text-2xl">
+     </i>
+     <h1 class="text-2xl font-bold text-blue-600 ml-2">
+      IPL Cricket Central
+     </h1>
+    </div>
+    <nav class="space-x-4">
+      <a class="text-gray-600 hover:text-blue-600" href="/schedule">Schedule</a>
+      <a class="text-orange-600 font-semibold" href="/orange_cap">Orange CAP</a>
+      <a class="text-purple-600 font-semibold" href="/purple_cap">Purple CAP</a>
+    </nav>
+    <div class="space-x-4">
+    </div>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-6">
+   <div class="bg-white shadow rounded-lg overflow-hidden">
+    <div style="overflow-x: auto;">
+      <h2>{{ result }}<h2>
+
+    <table class="min-w-full bg-white">
+     <thead class="bg-gray-50">
+      <tr>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Team
+       </th>
+       
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Matches
+       </th>
+
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Pts
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        W
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        L
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        NRR
+       </th>
+       <!-- <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Form
+       </th> -->
+       <!-- <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Status
+       </th> -->
+      </tr>
+     </thead>
+     <tbody>
+        {% for team in points %}
+      <tr class="border-t">
+       <td class="py-2 px-4 text-sm text-gray-600 flex items-center">
+       <a href="/predict/{{ team.Id }}">{{ team.Team }}</a>        
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+        {{ team.Matches }}       
+       </td>
+
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ team.Points }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-red-600">
+        {{ team.Won }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ team.Lost }}
+       </td>
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ team.NRR }}
+       </td>
+      </tr>
+      
+      {% endfor %}
+     </tbody>
+    </table>
+    </div>
+   </div>
+   <hr>
+   <br>
+  </main>
+  
+<script>
+   function update(){
+    
+   }  
+</script>
+
+ </body>
+</html>

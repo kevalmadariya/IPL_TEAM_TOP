@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>IPL Cricket Central</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: linear-gradient(180deg, #1E3A8A 0%, #7C3AED 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 10; /* Ensure content is above the background */
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-trophy text-orange-500 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-600 ml-2">IPL Cricket Central</h1>
+            </div>
+            <nav class="space-x-4">
+                <a class="text-green-600 hover:text-blue-600" href="">Home</a>
+                <a class="text-gray-600 hover:text-blue-600" href="/schedule">Schedule</a>
+                <a class="text-blue-600 font-semibold" href="/points-table">Points Table</a>
+                <a class="text-orange-600 font-semibold" href="/orange_cap">Orange CAP</a>
+                <a class="text-purple-600 font-semibold" href="/purple_cap">Purple CAP</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container mx-auto px-4 py-20 text-center content">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Welcome to
+            <span class="text-orange-500">IPL</span>
+            <br/>
+            <span class="text-orange-500">Cricket Central</span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl lg:text-2xl">
+            Your ultimate destination for all things IPL - from matches and teams to tournaments.
+        </p>
+        <div class="mt-8 flex justify-center space-x-4">
+            <!-- Uncomment buttons if needed -->
+            <!-- <button class="bg-orange-500 text-white py-2 px-4 rounded-full flex items-center">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                Latest Fixtures
+            </button> -->
+            <!-- <button class="bg-white text-gray-700 py-2 px-4 rounded-full flex items-center">
+                <i class="fas fa-users mr-2"></i>
+                 Explore Teams
+            </button> -->
+        </div>
+        <div class="mt-8 flex justify-center space-x-8 text-lg md:text-xl lg:text-2xl">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-trophy text-orange-500"></i>
+                <span>10 Teams</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-alt text-orange-500"></i>
+                <span>70 Matches</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-users text-orange-500"></i>
+                <span>200+ Players</span>
+            </div>
+        </div>
+        <div class="mt-8">
+        </div>
+    </div>
+</body>
+<img src="{{url_for('static', filename='ipl.png')}}"/>
+
+</html>

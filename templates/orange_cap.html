@@ -1,0 +1,149 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IPL Cricket Central
+  </title>
+  <style>
+    body {
+        background: linear-gradient(180deg, #1E3A8A 0%, #7C3AED 100%);
+   
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+     <i class="fas fa-trophy text-orange-500 text-2xl">
+     </i>
+     <h1 class="text-2xl font-bold text-blue-600 ml-2">
+      IPL Cricket Central
+     </h1>
+    </div>
+    <nav class="space-x-4">
+        <button style='font-size:24px' onclick="update_table()"><i class='fas fa-redo-alt'></i></button>
+        <a class="text-green-600 hover:text-blue-600" href="/">Home</a>
+        <a class="text-gray-600 hover:text-blue-600" href="/schedule">Schedule</a>
+        <a class="text-blue-600 font-semibold" href="/points-table">Points Table</a>
+        <a class="text-purple-600 font-semibold" href="/purple_cap">Purple CAP</a>
+           
+    </nav>
+    <div class="space-x-4">
+    </div>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-6">
+   <div class="bg-white shadow rounded-lg overflow-hidden">
+    <div style="overflow-x: auto;">
+      <h2>{{ result }}<h2>
+
+    <table class="min-w-full bg-white">
+     <thead class="bg-gray-50">
+      <tr>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Player
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Match
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Run
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        SR
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Inn
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Not out
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        HIGH SCORE  
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Avg
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        50s
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        100s
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        6s
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+        {% for orange in orange_cap_data %}
+      <tr class="border-t">
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+        {{ orange.Player }}       
+       </td>
+
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ orange.Mat }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-red-600">
+        {{ orange.R }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ orange.SR }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange.Inn }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange.NO }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange.HS }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange.Avg }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange["50s"] }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange["100s"] }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ orange["6s"] }}
+       </td>
+
+      </tr>
+      
+      {% endfor %}
+     </tbody>
+    </table>
+    </div>
+   </div>
+   <hr>
+   <br>
+  </main>
+  
+<script>
+   function update(){
+    
+   }  
+</script>
+
+ </body>
+</html>

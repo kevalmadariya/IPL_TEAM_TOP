@@ -1,0 +1,141 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IPL Cricket Central
+  </title>
+  <style>
+    body {
+        background: linear-gradient(180deg, #1E3A8A 0%, #7C3AED 100%);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+     <i class="fas fa-trophy text-orange-500 text-2xl">
+     </i>
+     <h1 class="text-2xl font-bold text-blue-600 ml-2">
+      IPL Cricket Central
+     </h1>
+    </div>
+    <nav class="space-x-4">
+        <button style='font-size:24px' onclick="update_table()"><i class='fas fa-redo-alt'></i></button>
+        <a class="text-green-600 hover:text-blue-600" href="/">Home</a>
+        <a class="text-gray-600 hover:text-blue-600" href="/schedule">Schedule</a>
+        <a class="text-blue-600 font-semibold" href="/points-table">Points Table</a>
+        <a class="text-orange-600 font-semibold" href="/orange_cap">Orange CAP</a>
+    </nav>
+    <div class="space-x-4">
+    </div>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-6">
+   <div class="bg-white shadow rounded-lg overflow-hidden">
+    <div style="overflow-x: auto;">
+      <h2>{{ result }}<h2>
+
+    <table class="min-w-full bg-white">
+     <thead class="bg-gray-50">
+      <tr>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Player
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Wicket
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Avg
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Over
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        Run
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        BBF
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        EC
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        SR
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        3w
+       </th>
+       <th class="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+        5w
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+        {% for purple in purple_cap_data %}
+      <tr class="border-t">
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+        {{ purple.Player }}       
+       </td>
+
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ purple.W }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-red-600">
+        {{ purple.Avg }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-green-600">
+        {{ purple.Ovr }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple.R }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple.BBF }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple.EC }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple.SR }}
+       </td>
+
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple["3w"] }}
+       </td>
+       
+       <td class="py-2 px-4 text-sm text-gray-600">
+            {{ purple["5w"] }}
+       </td>
+       
+       
+      </tr>
+      
+      {% endfor %}
+     </tbody>
+    </table>
+    </div>
+   </div>
+   <hr>
+   <br>
+  </main>
+  
+<script>
+   function update(){
+    
+   }  
+</script>
+
+ </body>
+</html>
